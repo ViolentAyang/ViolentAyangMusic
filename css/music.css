@@ -53,7 +53,19 @@ body{
     top:160px;
     left: 580px;
 }
-/*------------横幅 结束-----------------*/
+/* 图片旋转的动画 */
+ @keyframes img_rotate {
+     from {
+         transform: rotate(0deg);
+     } to {
+         transform: rotate(360deg);
+     }
+ }
+ /* 动画执行的时间和次数 */
+.banner .img_rotate{
+    animation: img_rotate 4s infinite; 
+}
+ /*------------横幅 结束-----------------*/
 
 /*-------------播放器--------------*/
 /*修改播放器的样式*/
@@ -101,7 +113,7 @@ body{
     margin-left: 20px;
 }
 /*改变上一首的图片*/
-.music .m_btn .m_pre{
+.music .m_btn .m_prev{
     background-position: -68px 0;
 }
 .music .m_btn .m_pre:hover{
@@ -131,5 +143,15 @@ body{
     margin-top: 0;
     cursor: pointer;/*鼠标变手势*/
 }
-
+/*编写js代码时，更换播放按钮为暂停时编写的代码*/
+.music .m_btn .m_pause{
+    background-position: -292px -93px;
+}
+.music .m_btn .m_pause:hover{
+    background-position: -334px -93px;
+}
+/*编写js代码时，隐藏或者显示播放器时编写的代码*/
+.music .m_open{
+    background-position: -45px 0px;
+}
 /*-------------播放器--------------*/
